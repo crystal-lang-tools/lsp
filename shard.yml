@@ -1,0 +1,9 @@
+name: lsp
+version: 0.1.0
+
+authors:
+  - Kepler Sticka-Jones <kepler@stickajones.org>
+
+crystal: 0.24.1
+
+license: MIT

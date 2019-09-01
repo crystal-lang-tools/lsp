@@ -1,7 +1,7 @@
 module LSP::Protocol
-  struct CancelParams
+  struct WorkspaceSymbolParams
     JSON.mapping({
-      id: Int32 | String,
+      query: String,
     }, true)
   end
 end

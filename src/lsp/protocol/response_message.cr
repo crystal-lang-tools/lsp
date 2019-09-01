@@ -1,17 +1,11 @@
-require "./response_error"
-require "./text_edit"
-require "./location"
-require "./symbol_information"
-require "./completion_item"
-
 module LSP::Protocol
   # Add a response type when needed
-  alias ResponseTypes = Array(TextEdit) | Array(Location) | Array(SymbolInformation) | Array(CompletionItem) | CompletionItem
+  alias ResponseTypes = Array(TextEdit) | Array(Location) | Array(SymbolInformation) | Array(CompletionItem) | CompletionItem | Hover | Location
 
   struct ResponseMessage
     JSON.mapping({
       jsonrpc: String,
-      id:      Int32 | String | Nil,
+      id:      {type: Int32 | String | Nil, emit_null: true},
       result:  ResponseTypes?,
       error:   ResponseError?,
     }, true)
@@ -25,10 +19,7 @@ module LSP::Protocol
     end
 
     def initialize(ex : Exception)
-      @error = ResponseError.new(
-        ex.message || "Unknown error",
-        ex.backtrace
-      )
+      @error = ResponseError.new(ex)
     end
   end
 end

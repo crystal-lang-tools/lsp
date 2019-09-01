@@ -1,5 +1,3 @@
-require "./file_event"
-
 module LSP::Protocol
   struct DidChangeWatchedFilesParams
     JSON.mapping({

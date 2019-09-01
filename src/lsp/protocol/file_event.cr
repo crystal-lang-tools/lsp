@@ -1,5 +1,3 @@
-require "json"
-
 module LSP::Protocol
   enum FileEventType
     Created = 1

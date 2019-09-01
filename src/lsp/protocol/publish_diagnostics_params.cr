@@ -1,5 +1,3 @@
-require "./diagnostic"
-
 module LSP::Protocol
   struct PublishDiagnosticsParams
     JSON.mapping({

@@ -1,6 +1,3 @@
-require "./range"
-require "./position"
-
 module LSP::Protocol
   enum DiagnosticSeverity
     Error       = 1
@@ -43,7 +40,7 @@ module LSP::Protocol
         Position.new(line - 1, column + size - 1)
       )
       @severity = DiagnosticSeverity::Error.value
-      @source = "Scry [Crystal]"
+      @source = "Scry"
     end
   end
 end

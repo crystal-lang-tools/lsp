@@ -32,16 +32,6 @@ module LSP::Protocol
     Snippet   = 2
   end
 
-  struct MarkupContent
-    JSON.mapping({
-      kind:  String,
-      value: String,
-    })
-
-    def initialize(@kind, @value)
-    end
-  end
-
   struct RequireModuleContextData
     JSON.mapping({
       require_module_context: Bool,

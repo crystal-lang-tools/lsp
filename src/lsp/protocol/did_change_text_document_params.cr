@@ -1,6 +1,3 @@
-require "./versioned_text_document_identifier"
-require "./text_document_content_change_event"
-
 module LSP::Protocol
   struct DidChangeTextDocumentParams
     JSON.mapping({

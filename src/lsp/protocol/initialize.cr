@@ -1,5 +1,3 @@
-require "./initialize_result"
-
 module LSP::Protocol
   struct Initialize
     JSON.mapping(

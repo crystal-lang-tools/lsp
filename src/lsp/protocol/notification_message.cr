@@ -1,14 +1,3 @@
-require "./did_change_configuration_params"
-require "./did_change_text_document_params"
-require "./did_change_watched_files_params"
-require "./did_open_text_document_params"
-require "./text_document_params"
-require "./document_formatting_params"
-require "./publish_diagnostics_params"
-require "./void_params"
-require "./trace"
-require "./cancel_params"
-
 module LSP::Protocol
   alias NotificationType = (DidChangeConfigurationParams |
                             DidChangeTextDocumentParams |
@@ -18,6 +7,7 @@ module LSP::Protocol
                             PublishDiagnosticsParams |
                             VoidParams |
                             CancelParams |
+                            LogMessageParams |
                             Trace)
 
   struct NotificationMessage

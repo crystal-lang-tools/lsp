@@ -17,7 +17,7 @@ module LSP::Protocol
     end
   end
 
-  # Specify supported sever capabilities:
+  # Specify supported server capabilities:
   #
   # - Go to Implementation (WIP)
   # - Diagnostics (WIP)

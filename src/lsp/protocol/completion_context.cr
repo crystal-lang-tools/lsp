@@ -1,7 +1,8 @@
 module LSP::Protocol
   enum CompletionTriggerKind
-    Invoked          = 1
-    TriggerCharacter = 2
+    Invoked                         = 1
+    TriggerCharacter                = 2
+    TriggerForIncompleteCompletions = 3
   end
 
   struct CompletionContext

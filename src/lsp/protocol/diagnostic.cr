@@ -29,18 +29,15 @@ module LSP::Protocol
       end
     end
 
-    def initialize(bf : BuildFailure)
-      @filename = bf.file
-      @message = bf.message
-      line = bf.line || 0
-      column = bf.column
-      size = bf.size || 1
+    def initialize(file : String, line : Int32 | Nil, column : Int32 | Nil, size : Int32 | Nil, @message : String, @source : String)
+      @filename = file
+      line = line || 0
+      size = size || 1
       @range = Range.new(
         Position.new(line - 1, column - 1),
         Position.new(line - 1, column + size - 1)
       )
       @severity = DiagnosticSeverity::Error.value
-      @source = "Scry"
     end
   end
 end

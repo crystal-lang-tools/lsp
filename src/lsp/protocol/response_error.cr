@@ -18,11 +18,8 @@ module LSP::Protocol
   class ProtocolException < Exception
     getter code
 
-    def initialize(
-      @message : String? = nil,
-      @cause : Exception? = nil,
-      @code : ErrorCodes = ErrorCodes::UnknownErrorCode
-    )
+    def initialize(message, cause, @code : ErrorCodes = ErrorCodes::UnknownErrorCode)
+      super(message, cause)
     end
   end
 

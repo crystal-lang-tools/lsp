@@ -18,7 +18,7 @@ module LSP::Protocol
     end
 
     it "will have code from exception if made with ProtocolException" do
-      response_error = ResponseError.new(ProtocolException.new(code: ErrorCodes::InvalidRequest))
+      response_error = ResponseError.new(ProtocolException.new(nil, nil, code: ErrorCodes::InvalidRequest))
       response_error.code.should eq ErrorCodes::InvalidRequest
     end
 

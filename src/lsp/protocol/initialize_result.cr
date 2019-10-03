@@ -4,8 +4,7 @@ module LSP::Protocol
       capabilities: ServerCapabilities
     )
 
-    def initialize
-      @capabilities = ServerCapabilities.new
+    def initialize(@capabilities)
     end
   end
 end

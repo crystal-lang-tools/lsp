@@ -42,14 +42,8 @@ module LSP::Protocol
       hoverProvider: Bool,
     )
 
-    def initialize
-      @textDocumentSync = TextDocumentSyncKind::Full
-      @documentFormattingProvider = true
-      @definitionProvider = true
-      @documentSymbolProvider = true
-      @workspaceSymbolProvider = true
-      @completionProvider = CompletionOptions.new
-      @hoverProvider = true
+    def initialize(@textDocumentSync, @documentFormattingProvider, @definitionProvider,
+                   @documentSymbolProvider, @workspaceSymbolProvider, @completionProvider, @hoverProvider)
     end
   end
 end

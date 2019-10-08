@@ -1,12 +1,10 @@
-require "./initialize_params"
-require "./text_document_position_params"
-
 module LSP::Protocol
   struct RequestMessage
     alias RequestType = (TextDocumentPositionParams |
                          InitializeParams |
                          DocumentFormattingParams |
                          TextDocumentParams |
+                         WorkspaceSymbolParams |
                          CompletionItem)?
 
     JSON.mapping({

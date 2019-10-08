@@ -1,13 +1,10 @@
-require "./server_capabilities"
-
 module LSP::Protocol
   struct InitializeResult
     JSON.mapping(
       capabilities: ServerCapabilities
     )
 
-    def initialize
-      @capabilities = ServerCapabilities.new
+    def initialize(@capabilities)
     end
   end
 end

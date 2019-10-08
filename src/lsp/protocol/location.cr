@@ -1,5 +1,3 @@
-require "./range"
-
 module LSP::Protocol
   struct Location
     JSON.mapping({

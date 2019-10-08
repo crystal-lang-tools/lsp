@@ -1,5 +1,3 @@
-require "./initialize_result"
-
 module LSP::Protocol
   struct Initialize
     JSON.mapping(
@@ -8,10 +6,10 @@ module LSP::Protocol
       result: InitializeResult
     )
 
-    def initialize(msg_id : Int32)
+    def initialize(msg_id : Int32, server_capabilities : ServerCapabilities)
       @jsonrpc = "2.0"
       @id = msg_id
-      @result = InitializeResult.new
+      @result = InitializeResult.new(server_capabilities)
     end
   end
 end

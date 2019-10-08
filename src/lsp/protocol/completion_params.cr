@@ -1,7 +1,3 @@
-require "./text_document_identifier"
-require "./position"
-require "./completion_context"
-
 module LSP::Protocol
   struct CompletionParams
     JSON.mapping({

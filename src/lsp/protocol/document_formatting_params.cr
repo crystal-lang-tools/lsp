@@ -1,5 +1,3 @@
-require "./formatting_options"
-
 module LSP::Protocol
   struct DocumentFormattingParams
     JSON.mapping({

@@ -1,3 +1,4 @@
+require "json"
 require "./lsp/*"
 
 # TODO: Write documentation for `LSP`

@@ -1,7 +1,7 @@
 module LSP::Protocol
   struct DidChangeConfigurationParams
     JSON.mapping({
-      settings: JSON::Any
+      settings: JSON::Any,
     }, true)
   end
 end

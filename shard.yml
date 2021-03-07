@@ -4,6 +4,10 @@ version: 0.1.0
 authors:
   - Kepler Sticka-Jones <kepler@stickajones.org>
 
-crystal: 0.24.1
+crystal: 0.36.1
 
 license: MIT
+
+dependencies:
+  json_mapping:
+    github: crystal-lang/json_mapping.cr

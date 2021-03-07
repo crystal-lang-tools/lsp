@@ -1,5 +1,3 @@
-require "json"
-
 module LSP::Protocol
   struct VersionedTextDocumentIdentifier
     JSON.mapping({

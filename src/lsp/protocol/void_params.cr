@@ -1,5 +1,3 @@
-require "json"
-
 module LSP::Protocol
   struct VoidParams
     def initialize(pull : JSON::PullParser)

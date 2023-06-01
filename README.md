@@ -1,3 +1,7 @@
+#### NOTE: Check https://github.com/elbywan/crystal-lsp for an implementation of the Language Server Protocol written in Crystal.
+
+---
+
 # lsp
 
 TODO: Write a description here
